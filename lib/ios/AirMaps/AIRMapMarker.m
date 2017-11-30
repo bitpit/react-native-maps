@@ -216,8 +216,9 @@
     
     if (marker.onPress) marker.onPress(event);
     if (marker.map.onMarkerPress) marker.map.onMarkerPress(event);
-    
-    [marker.map selectAnnotation:marker animated:NO];
+
+    // this ends up selecting multiple annotations, don't do it
+    // [marker.map selectAnnotation:marker animated:NO];
 }
 
 - (void)hideCalloutView
